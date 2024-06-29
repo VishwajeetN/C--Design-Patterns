@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Creational_Design_Patterns\" />
-    <Folder Include="Behavioral_Design_Patterns\" />
   </ItemGroup>
 
 </Project>

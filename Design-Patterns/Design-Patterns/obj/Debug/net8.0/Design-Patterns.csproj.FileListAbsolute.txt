@@ -12,3 +12,4 @@ C:\Users\Public\Documents\CSharp-Design-Patterns\CSharp-Design-Patterns\Design-P
 C:\Users\Public\Documents\CSharp-Design-Patterns\CSharp-Design-Patterns\Design-Patterns\Design-Patterns\obj\Debug\net8.0\Design-Patterns.pdb
 C:\Users\Public\Documents\CSharp-Design-Patterns\CSharp-Design-Patterns\Design-Patterns\Design-Patterns\obj\Debug\net8.0\Design-Patterns.genruntimeconfig.cache
 C:\Users\Public\Documents\CSharp-Design-Patterns\CSharp-Design-Patterns\Design-Patterns\Design-Patterns\obj\Debug\net8.0\ref\Design-Patterns.dll
+C:\Users\Public\Documents\CSharp-Design-Patterns\CSharp-Design-Patterns\Design-Patterns\Design-Patterns\obj\Debug\net8.0\Design-Patterns.sourcelink.json

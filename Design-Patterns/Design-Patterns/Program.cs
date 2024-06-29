@@ -1,8 +1,15 @@
 ﻿using System.Drawing;
 using System.Numerics;
 using System.Runtime.CompilerServices;
+
+// Facade Design Pattern Namespace
 using Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern;
 using static Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern.Restaurant_Facade;
+
+// Command Design Pattern Namespace
+
+using Design_Patterns.Behavioral_Design_Patterns.Command_Pattern;
+using static Design_Patterns.Behavioral_Design_Patterns.Command_Pattern.Command;
 
 namespace Design_Patterns
 {
@@ -29,7 +36,7 @@ namespace Design_Patterns
             // 4. Aggregate objects to simplify process.
 
             // Example : 1 ==> Using the Facade to start and stop the car.
-             */
+             
             Console.WriteLine("\n ==> Example: 1\n");
             CarFacade car = new CarFacade();
 
@@ -51,8 +58,50 @@ namespace Design_Patterns
 
             facadeForClient.GetGarlicBread();
             facadeForClient.GetCheesyGarlicBread();
-            
-           
+            */
+
+
+            // Command Design Pattern
+
+            // Create the Receiver Object.
+            Console.WriteLine("\n---------------Windows File System Operation------------------------------\n");
+            IFileSystemReceiver fsWindows = new WindowsFileSystemReceiver();
+
+            // Define
+            FileInvoker windowsFileInvoker;
+
+            // Create command and associate with Receiver.
+            OpenFileCommand WindowOpenFileCommand = new OpenFileCommand(fsWindows);
+            windowsFileInvoker = new FileInvoker(WindowOpenFileCommand);
+            windowsFileInvoker.InovkeExecute();
+
+            WriteFileCommand windowsWriteFileCommand = new WriteFileCommand(fsWindows);
+            windowsFileInvoker = new FileInvoker(windowsWriteFileCommand);
+            windowsFileInvoker.InovkeExecute();
+
+            CloseFileCommand windowsCloseFileCommand = new CloseFileCommand(fsWindows);
+            windowsFileInvoker = new FileInvoker(windowsCloseFileCommand);
+            windowsFileInvoker.InovkeExecute();
+
+
+            Console.WriteLine("\n---------------Linux File System Operation------------------------------\n");
+            IFileSystemReceiver fsLinux = new LinuxFileSystemReceiver();
+
+            // Define
+            FileInvoker linuxFileInvoker;
+
+            // Create command and associate with Receiver.
+            OpenFileCommand linuxOpenFileCommand = new OpenFileCommand(fsLinux);
+            linuxFileInvoker = new FileInvoker(linuxOpenFileCommand);
+            linuxFileInvoker.InovkeExecute();
+
+            WriteFileCommand linuxWriteFileCommand = new WriteFileCommand(fsLinux);
+            linuxFileInvoker = new FileInvoker(linuxWriteFileCommand);
+            linuxFileInvoker.InovkeExecute();
+
+            CloseFileCommand linuxCloseFileCommand = new CloseFileCommand(fsLinux);
+            linuxFileInvoker = new FileInvoker(linuxCloseFileCommand);
+            linuxFileInvoker.InovkeExecute();
 
             Console.ReadLine();
         }
