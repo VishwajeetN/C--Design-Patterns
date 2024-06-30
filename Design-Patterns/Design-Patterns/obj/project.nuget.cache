@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jmdZ1DHUfcY=",
+  "dgSpecHash": "zqhlzPVv/DI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Public\\Documents\\CSharp-Design-Patterns\\CSharp-Design-Patterns\\Design-Patterns\\Design-Patterns\\Design-Patterns.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\VishwajitNikam\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

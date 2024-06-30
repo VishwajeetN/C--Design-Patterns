@@ -12,6 +12,11 @@ using static Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern.Ec
 using Design_Patterns.Behavioral_Design_Patterns.Command_Pattern;
 using static Design_Patterns.Behavioral_Design_Patterns.Command_Pattern.Command;
 
+
+// Adapter Design Pattern Namespace
+using static Design_Patterns.Structural_Design_Patterns.Adapter_Design_Pattern.Adapter_Pattern;
+using static Design_Patterns.Structural_Design_Patterns.Adapter_Design_Pattern.Adapter_Pattern2;
+
 namespace Design_Patterns
 {
     internal class Program
@@ -49,8 +54,6 @@ namespace Design_Patterns
 
 
 
-
-
             // Example : 2 ==> Using the Facade for Client Order (Pizza/Bread).
 
             Console.WriteLine("\n ==> Example: 2");
@@ -73,7 +76,7 @@ namespace Design_Patterns
             order.PlaceOrder();
              */
 
-//// =================================================================================================================================================
+            //// =================================================================================================================================================
             /*
             // Command Design Pattern
 
@@ -119,6 +122,28 @@ namespace Design_Patterns
 
             */
 
+            //// =================================================================================================================================================
+            
+            // Example : 1 ==> High level Adapter Example (Code with RSV - You tube channel)
+
+            /*
+            string jsonData = "Random Json Data";
+            AnalyticLibrary adaptee = new AnalyticLibrary();
+            DataVisualizerAdapter adapter = new DataVisualizerAdapter(adaptee);
+            adapter.DisplayGraph(jsonData);
+            
+
+            // Example : 2 ==> Dotnet Trick Example (Shailendra Chauhan)
+
+            ICustomer customer = new CustomerAdapter();
+            IEnumerable<CustomerDTO> data = customer.GetCustomers();
+
+            foreach (CustomerDTO dto in data)
+            {
+                Console.WriteLine(string.Format("CustomerID: {0}, FullName: {1}, AddressDetails: {2}, Mobile: {3}",
+                                 dto.CustomerId, dto.FullName, dto.AddressDetails, dto.Mobile));
+            }
+            */
             Console.ReadLine();
         }
 
