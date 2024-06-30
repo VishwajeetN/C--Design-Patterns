@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 // Facade Design Pattern Namespace
 using Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern;
 using static Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern.Restaurant_Facade;
+using static Design_Patterns.Structural_Design_Patterns.Facade_Design_Pattern.Ecommerce_Facade;
 
 // Command Design Pattern Namespace
 
@@ -26,7 +27,7 @@ namespace Design_Patterns
             //    for clients.
 
             // 2. Essentially, it acts as a facade or entry point to a more complex system, 
-            //    shielding clients from its intricacies.
+            //    shielding clients from its intricaciesc(Complexcity).
 
             // 3. This pattern involves a single wrapper class which contains a set of members which
             //    are required by client. These members access the system on behalf of the facade client
@@ -46,7 +47,12 @@ namespace Design_Patterns
             
             car.stopCar();
 
+
+
+
+
             // Example : 2 ==> Using the Facade for Client Order (Pizza/Bread).
+
             Console.WriteLine("\n ==> Example: 2");
             Console.WriteLine("\n----------------------CLIENT ORDERS FOR PIZZA----------------------------\n");
 
@@ -58,9 +64,17 @@ namespace Design_Patterns
 
             facadeForClient.GetGarlicBread();
             facadeForClient.GetCheesyGarlicBread();
-            */
+            
 
 
+            // Example : 3 ==> Using the Facade for Ecommerce Order Product.
+
+            OrderFacade order = new OrderFacade();
+            order.PlaceOrder();
+             */
+
+//// =================================================================================================================================================
+            /*
             // Command Design Pattern
 
             // Create the Receiver Object.
@@ -102,6 +116,8 @@ namespace Design_Patterns
             CloseFileCommand linuxCloseFileCommand = new CloseFileCommand(fsLinux);
             linuxFileInvoker = new FileInvoker(linuxCloseFileCommand);
             linuxFileInvoker.InovkeExecute();
+
+            */
 
             Console.ReadLine();
         }
